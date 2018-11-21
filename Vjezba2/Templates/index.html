@@ -1,0 +1,25 @@
+{%extends "bootstrap/base.html"%}
+
+{%block title%}
+Početna stranica
+{%endblock%}
+
+{%block head%}
+{{ super()}}
+
+    <style>
+    </style>
+{%endblock%}
+
+
+
+
+{%block body%}
+<div class="container">
+    <h1>Hello !!! Bajlo HACKER</h1>
+    <div class="navbar-header">
+    <h3><a href="{{ url_for( 'comments' ,_external=True)}}">View comments</a></h3>
+    <h3><a href="/comments/">View comments</a></h3>
+    </div>
+</div>
+{%endblock%}

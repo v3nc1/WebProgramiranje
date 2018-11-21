@@ -1,0 +1,17 @@
+<!-- TODO -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="page-header">
+		<h1>Zadaci</h1>
+		<!-- TODO -->
+	</div>
+	<ul>
+		{% for todo in todos %}
+			<li><strong>{{ todo["title"] }}</strong> - {{ todo["body"] }}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
+	

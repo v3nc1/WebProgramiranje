@@ -1,0 +1,14 @@
+<form method='post'>
+    {% for field in form %}
+        {{ field.label }}
+        {{ field }}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <div class="field_error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        <br>
+    {% endfor %}
+</form>
+
+<h1>{{ message }}</h1>

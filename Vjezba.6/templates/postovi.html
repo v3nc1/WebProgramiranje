@@ -1,0 +1,16 @@
+<!-- TODO -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="page-header">
+		<h1>Postovi</h1>
+	</div>
+	<ul>
+		{% for post in postovi %}
+			<li><strong>{{ post["title"] }}</strong> - {{ post["body"] }}</li>
+			<a href = {{ url_for('comments', post_id=post["id"]) }}>Komentari</a>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
